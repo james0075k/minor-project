@@ -4,8 +4,14 @@ import { ReactNode, useEffect, useState } from 'react';
 import { StreamVideoClient, StreamVideo } from '@stream-io/video-react-sdk';
 import { useUser } from '@clerk/nextjs';
 
-import { tokenProvider } from '@/actions/stream.actions';
 import Loader from '@/components/Loader';
+
+const tokenProvider = async () => {
+  const res = await fetch('/api/get-stream-token');
+  if (!res.ok) throw new Error('Failed to fetch stream token');
+  const data = await res.json();
+  return data.token as string;
+};
 
 const API_KEY = process.env.NEXT_PUBLIC_STREAM_API_KEY;
 
