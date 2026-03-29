@@ -7,9 +7,16 @@ import { useUser } from '@clerk/nextjs';
 import Loader from '@/components/Loader';
 
 const tokenProvider = async () => {
+  console.log('[Stream] Fetching token from API...');
   const res = await fetch('/api/get-stream-token');
-  if (!res.ok) throw new Error('Failed to fetch stream token');
+  console.log('[Stream] Token API status:', res.status);
+  if (!res.ok) {
+    const text = await res.text();
+    console.error('[Stream] Token API error:', text);
+    throw new Error(`Token fetch failed: ${res.status} - ${text}`);
+  }
   const data = await res.json();
+  console.log('[Stream] Token received:', !!data.token);
   return data.token as string;
 };
 
