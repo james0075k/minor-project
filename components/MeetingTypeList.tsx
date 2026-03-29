@@ -60,8 +60,9 @@ const MeetingTypeList = () => {
         title: 'Meeting Created',
       });
     } catch (error) {
-      console.error(error);
-      toast({ title: `Error: ${error instanceof Error ? error.message : String(error)}` });
+      console.error('Meeting creation error:', JSON.stringify(error), error);
+      const msg = error instanceof Error ? error.message : JSON.stringify(error) ?? 'unknown';
+      toast({ title: `Error: ${msg}` });
     }
   };
 
