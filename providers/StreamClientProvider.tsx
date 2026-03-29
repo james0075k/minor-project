@@ -6,21 +6,7 @@ import { useUser } from '@clerk/nextjs';
 
 import Loader from '@/components/Loader';
 
-const tokenProvider = async () => {
-  console.log('[Stream] Fetching token from API...');
-  const res = await fetch('/api/get-stream-token');
-  console.log('[Stream] Token API status:', res.status);
-  if (!res.ok) {
-    const text = await res.text();
-    console.error('[Stream] Token API error:', text);
-    throw new Error(`Token fetch failed: ${res.status} - ${text}`);
-  }
-  const data = await res.json();
-  console.log('[Stream] Token received:', !!data.token);
-  return data.token as string;
-};
-
-const API_KEY = process.env.NEXT_PUBLIC_STREAM_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_STREAM_API_KEY!;
 
 const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
   const [videoClient, setVideoClient] = useState<StreamVideoClient>();
@@ -33,14 +19,24 @@ const StreamVideoProvider = ({ children }: { children: ReactNode }) => {
     const client = new StreamVideoClient({
       apiKey: API_KEY,
       user: {
-        id: user?.id,
-        name: user?.username || user?.id,
-        image: user?.imageUrl,
+        id: user.id,
+        name: user.username || user.id,
+        image: user.imageUrl,
       },
-      tokenProvider,
+      tokenProvider: async () => {
+        const res = await fetch('/api/get-stream-token');
+        if (!res.ok) throw new Error(`Token fetch failed: ${res.status}`);
+        const data = await res.json();
+        return data.token as string;
+      },
     });
 
     setVideoClient(client);
+
+    return () => {
+      client.disconnectUser();
+      setVideoClient(undefined);
+    };
   }, [user, isLoaded]);
 
   if (!videoClient) return <Loader />;
