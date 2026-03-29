@@ -73,7 +73,7 @@ const Chatbot = () => {
     const userMsg = newMessage.toLowerCase();
 
     // ✅ 1️⃣ Check for simple arithmetic: +, -, *, /
-    const arithmeticMatch = userMsg.match(/(-?\d+\.?\d*)\s*([\+\-\*\/])\s*(-?\d+\.?\d*)/);
+    const arithmeticMatch = userMsg.match(/(-?\d+\.?\d*)\s*([+\-*/])\s*(-?\d+\.?\d*)/);
     if (arithmeticMatch) {
       const num1 = parseFloat(arithmeticMatch[1]);
       const operator = arithmeticMatch[2];
