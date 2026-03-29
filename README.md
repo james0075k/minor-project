@@ -1,448 +1,444 @@
 <div align="center">
-  <br />
-    <a href="https://youtu.be/R8CIO1DZ2b8" target="_blank">
-      <img src="https://github.com/adrianhajdin/zoom-clone/assets/67959015/f09a8421-67d3-45ce-b9bc-a791cdc2774b" alt="Project Banner">
-    </a>
-  
-  <br />
 
-  <div>
-    <img src="https://img.shields.io/badge/-TypeScript-black?style=for-the-badge&logoColor=white&logo=typescript&color=3178C6" alt="typescript" />
-    <img src="https://img.shields.io/badge/-Next_JS-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=000000" alt="nextdotjs" />
-    <img src="https://img.shields.io/badge/-Tailwind_CSS-black?style=for-the-badge&logoColor=white&logo=tailwindcss&color=06B6D4" alt="tailwindcss" />
-  </div>
+# ☁️ CloudCall
 
-  <h3 align="center">A Zoom Clone</h3>
+### *Next-Generation Video Conferencing Platform*
 
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-cloudcall--main.vercel.app-0E78F9?style=for-the-badge)](https://cloudcall-main.vercel.app)
+[![Next.js](https://img.shields.io/badge/Next.js-14.1.3-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript)](https://typescriptlang.org)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel)](https://vercel.com)
+
+<br/>
+
+> **CloudCall** is a full-stack, production-ready video conferencing web application built with **Next.js 14**, **Stream Video SDK**, and **Clerk Authentication**. It enables seamless real-time video communication with enterprise-grade features — all in a sleek, dark-themed UI.
+
+<br/>
+
+---
+
+## 🌐 Live Application
+
+### 👉 [https://cloudcall-main.vercel.app](https://cloudcall-main.vercel.app)
+
+---
+
 </div>
 
-## 📋 <a name="table">Table of Contents</a>
+## 📸 Screenshots
 
-1. 🤖 [Introduction](#introduction)
-2. ⚙️ [Tech Stack](#tech-stack)
-3. 🔋 [Features](#features)
-4. 🤸 [Quick Start](#quick-start)
-5. 🕸️ [Assets & Code](#snippets)
-6. 🚀 [More](#more)
+| Home Dashboard | Meeting Room |
+|:-:|:-:|
+| ![Home](public/images/hero-background.png) | *Live video grid with controls* |
 
-## 🚨 Tutorial
+| Sign In | Schedule Meeting |
+|:-:|:-:|
+| *Clerk-powered auth* | *Date & time picker modal* |
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
+---
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
+## ✨ Features
 
-<a href="https://youtu.be/R8CIO1DZ2b8" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+### 🎥 Video Conferencing
+- **Instant Meetings** — Start a video call in one click
+- **Scheduled Meetings** — Plan meetings with date & time picker
+- **Join via Link** — Enter any meeting with an invitation URL
+- **Personal Room** — Your own permanent meeting room URL
 
-## <a name="introduction">🤖 Introduction</a>
+### 🖥️ In-Call Experience
+- **Multiple Layouts** — Grid, Speaker-Left, Speaker-Right views
+- **Real-time Call Stats** — Monitor connection quality live
+- **Participant Panel** — See all attendees at a glance
+- **End Call Button** — Clean call termination with redirect
 
-Built with the latest Next.js and TypeScript, this project replicates Zoom, a widely used video conferencing tool. It enables users to securely log in, create meetings and access various meeting functionalities such as recording, screen sharing, and managing participants.
+### 📹 Pre-Call Setup
+- **Camera & Mic Preview** — Test devices before joining
+- **Device Selection** — Choose input/output devices
+- **Toggle Controls** — Join muted or with camera off
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over 30 thousand members. It's a place where people help each other out.
+### 🤖 AI Chatbot Assistant *(Unique Feature)*
+- Built-in floating chatbot inside the meeting room
+- Supports **arithmetic calculations** (`2 + 2`, `15 * 3`)
+- **Engineering & Physics formulas** (Ohm's Law, Kinetic Energy, etc.)
+- **CS concepts** (CPU, RAM, Stack, Queue, Big-O)
+- **Call troubleshooting tips** (low bandwidth, muted mic warnings)
+- Tech jokes & motivational quotes
 
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+### 🔐 Authentication
+- Secure **Sign Up / Sign In** via Clerk
+- Protected routes with middleware
+- Persistent sessions across devices
 
-## <a name="tech-stack">⚙️ Tech Stack</a>
+### 📋 Meeting History
+- **Upcoming Meetings** — View all scheduled calls
+- **Previous Meetings** — Browse past call history
+- **Recordings** — Access recorded sessions
 
-- Next.js
-- TypeScript
-- Clerk
-- getstream
-- shadcn
-- Tailwind CSS
+---
 
-## <a name="features">🔋 Features</a>
+## 🏗️ Architecture
 
-
-👉 **Authentication**: Implements authentication and authorization features using Clerk, allowing users to securely log in via social sign-on or traditional email and password methods, while ensuring appropriate access levels and permissions within the platform.
-
-👉 **New Meeting**: Quickly start a new meeting, configuring camera and microphone settings before joining.
-
-👉 **Meeting Controls**: Participants have full control over meeting aspects, including recording, emoji reactions, screen sharing, muting/unmuting, sound adjustments, grid layout, participant list view, and individual participant management (pinning, muting, unmuting, blocking, allowing video share).
-
-👉 **Exit Meeting**: Participants can leave a meeting, or creators can end it for all attendees.
-
-👉 **Schedule Future Meetings**: Input meeting details (date, time) to schedule future meetings, accessible on the 'Upcoming Meetings' page for sharing the link or immediate start.
-
-👉 **Past Meetings List**: Access a list of previously held meetings, including details and metadata.
-
-👉 **View Recorded Meetings**: Access recordings of past meetings for review or reference.
-
-👉 **Personal Room**: Users have a personal room with a unique meeting link for instant meetings, shareable with others.
-
-👉 **Join Meetings via Link**: Easily join meetings created by others by providing a link.
-
-👉 **Secure Real-time Functionality**: All interactions within the platform are secure and occur in real-time, maintaining user privacy and data integrity.
-
-👉 **Responsive Design**: Follows responsive design principles to ensure optimal user experience across devices, adapting seamlessly to different screen sizes and resolutions.
-
-and many more, including code architecture and reusability. 
-
-## <a name="quick-start">🤸 Quick Start</a>
-
-Follow these steps to set up the project locally on your machine.
-
-**Prerequisites**
-
-Make sure you have the following installed on your machine:
-
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en)
-- [npm](https://www.npmjs.com/) (Node Package Manager)
-
-**Cloning the Repository**
-
-```bash
-git clone https://github.com/adrianhajdin/zoom-clone.git
-cd zoom-clone
+```
+┌─────────────────────────────────────────────────────────────┐
+│                        Browser (Client)                     │
+│                                                             │
+│   ┌─────────────┐    ┌──────────────┐    ┌──────────────┐  │
+│   │  Clerk Auth │    │  Stream SDK  │    │   Next.js    │  │
+│   │  (Session)  │    │ (Video/WSS)  │    │   UI/Pages   │  │
+│   └──────┬──────┘    └──────┬───────┘    └──────┬───────┘  │
+│          │                  │                   │           │
+└──────────┼──────────────────┼───────────────────┼───────────┘
+           │                  │                   │
+           ▼                  ▼                   ▼
+┌─────────────────────────────────────────────────────────────┐
+│                    Vercel Edge Network                       │
+│                                                             │
+│   ┌─────────────────────┐    ┌──────────────────────────┐  │
+│   │  Next.js Middleware  │    │  API Route               │  │
+│   │  (Clerk auth check) │    │  /api/get-stream-token   │  │
+│   └─────────────────────┘    └──────────────────────────┘  │
+└─────────────────────────────────────────────────────────────┘
+           │                                    │
+           ▼                                    ▼
+┌─────────────────────┐            ┌────────────────────────┐
+│   Clerk.dev         │            │   Stream.io            │
+│   Auth Backend      │            │   Video + WebSocket    │
+│   (JWT Sessions)    │            │   (Real-time calls)    │
+└─────────────────────┘            └────────────────────────┘
 ```
 
-**Installation**
+---
 
-Install the project dependencies using npm:
+## 🗂️ Project Structure
+
+```
+cloudcall-main/
+│
+├── 📁 app/
+│   ├── 📁 (auth)/                    # Auth routes (Clerk)
+│   │   ├── sign-in/[[...sign-in]]/   # Sign in page
+│   │   └── sign-up/[[...sign-up]]/   # Sign up page
+│   │
+│   ├── 📁 (root)/
+│   │   ├── 📁 (home)/                # Protected home pages
+│   │   │   ├── page.tsx              # 🏠 Dashboard
+│   │   │   ├── upcoming/             # 📅 Upcoming meetings
+│   │   │   ├── previous/             # 🕐 Past meetings
+│   │   │   ├── recordings/           # 🎞️ Recordings
+│   │   │   ├── personal-room/        # 👤 Personal room
+│   │   │   └── layout.tsx            # Sidebar layout
+│   │   │
+│   │   └── meeting/[id]/             # 🎥 Live meeting room
+│   │
+│   ├── 📁 api/
+│   │   └── get-stream-token/         # 🔑 JWT token API route
+│   │
+│   ├── globals.css                   # Global styles
+│   └── layout.tsx                    # Root layout (ClerkProvider)
+│
+├── 📁 components/
+│   ├── 📁 ui/                        # Shadcn UI primitives
+│   ├── Chatbot.tsx                   # 🤖 AI Assistant
+│   ├── MeetingRoom.tsx               # 🎥 Live video room
+│   ├── MeetingTypeList.tsx           # 🃏 Meeting option cards
+│   ├── MeetingSetup.tsx              # ⚙️ Pre-call setup
+│   ├── MeetingModal.tsx              # 💬 Meeting dialogs
+│   ├── CallList.tsx                  # 📋 Call history list
+│   ├── Sidebar.tsx                   # 🗂️ Desktop sidebar
+│   ├── Navbar.tsx                    # 🔝 Top navigation
+│   └── MobileNav.tsx                 # 📱 Mobile navigation
+│
+├── 📁 hooks/
+│   ├── useGetCallById.ts             # Fetch call by ID
+│   └── useGetCalls.ts                # Fetch all calls
+│
+├── 📁 actions/
+│   └── stream.actions.ts             # Server actions
+│
+├── 📁 providers/
+│   └── StreamClientProvider.tsx      # Stream SDK context
+│
+├── 📁 constants/
+│   └── index.ts                      # Sidebar links & config
+│
+├── middleware.ts                      # Clerk route protection
+├── next.config.mjs                   # Next.js config
+├── tailwind.config.ts                # Tailwind theme config
+└── .env.local                        # Environment variables
+```
+
+---
+
+## 🛠️ Tech Stack
+
+### Core Framework
+| Technology | Version | Purpose |
+|---|---|---|
+| [Next.js](https://nextjs.org) | 14.1.3 | Full-stack React framework (App Router) |
+| [React](https://react.dev) | 18.x | UI component library |
+| [TypeScript](https://typescriptlang.org) | 5.x | Type safety |
+
+### Video & Real-time
+| Technology | Version | Purpose |
+|---|---|---|
+| [@stream-io/video-react-sdk](https://getstream.io/video/docs/react/) | 0.5.1 | Client-side video SDK |
+| [@stream-io/node-sdk](https://getstream.io/video/docs/api/) | 0.1.12 | Server-side token generation |
+
+### Authentication
+| Technology | Version | Purpose |
+|---|---|---|
+| [@clerk/nextjs](https://clerk.com/docs/nextjs) | 5.0.0-beta | Auth, sessions, user management |
+
+### UI & Styling
+| Technology | Version | Purpose |
+|---|---|---|
+| [Tailwind CSS](https://tailwindcss.com) | 3.3 | Utility-first styling |
+| [Radix UI](https://radix-ui.com) | Latest | Accessible headless components |
+| [Lucide React](https://lucide.dev) | 0.350 | Icon library |
+| [shadcn/ui](https://ui.shadcn.com) | — | Pre-built component system |
+| [tailwindcss-animate](https://github.com/jamiebuilds/tailwindcss-animate) | 1.0.7 | Animation utilities |
+
+### Utilities
+| Technology | Version | Purpose |
+|---|---|---|
+| [date-fns](https://date-fns.org) | 3.4 | Date formatting |
+| [react-datepicker](https://reactdatepicker.com) | 6.3 | Date/time picker UI |
+| [uuid](https://github.com/uuidjs/uuid) | 9.0 | Unique meeting ID generation |
+| [clsx](https://github.com/lukeed/clsx) | 2.1 | Conditional class names |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org) v18+
+- [npm](https://npmjs.com) or [yarn](https://yarnpkg.com)
+- A [Clerk](https://clerk.com) account
+- A [Stream.io](https://getstream.io) account with **Video & Audio** enabled
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/cloudcall-main.git
+cd cloudcall-main
+```
+
+### 2. Install Dependencies
 
 ```bash
 npm install
 ```
 
-**Set Up Environment Variables**
+### 3. Configure Environment Variables
 
-Create a new file named `.env` in the root of your project and add the following content:
+Create a `.env.local` file in the root directory:
 
 ```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
-
+# Clerk Authentication
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_xxxxxxxxxxxxxxxxxxxxxx
+CLERK_SECRET_KEY=sk_test_xxxxxxxxxxxxxxxxxxxxxx
+NEXT_PUBLIC_CLERK_FRONTEND_API=https://your-instance.clerk.accounts.dev
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 
-NEXT_PUBLIC_STREAM_API_KEY=
-STREAM_SECRET_KEY=
+# Stream Video
+NEXT_PUBLIC_STREAM_API_KEY=your_stream_api_key
+STREAM_SECRET_KEY=your_stream_secret_key
+
+# App
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
 ```
 
-Replace the placeholder values with your actual Clerk & getstream credentials. You can obtain these credentials by signing up on the [Clerk website](https://clerk.com/) and [getstream website](https://getstream.io/)
-
-**Running the Project**
+### 4. Run the Development Server
 
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## <a name="snippets">🕸️ Snippets</a>
+---
 
-<details>
-<summary><code>app/globals.css</code></summary>
+## ☁️ Deployment on Vercel
 
-```css
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ======== stream css overrides ======== */
-.str-video__call-stats {
-  max-width: 500px;
-  position: relative;
-}
-
-.str-video__speaker-layout__wrapper {
-  max-height: 700px;
-}
-
-.str-video__participant-details {
-  color: white;
-}
-
-.str-video__menu-container {
-  color: white;
-}
-
-.str-video__notification {
-  color: white;
-}
-
-.str-video__participant-list {
-  background-color: #1c1f2e;
-  padding: 10px;
-  border-radius: 10px;
-  color: white;
-  height: 100%;
-}
-
-.str-video__call-controls__button {
-  height: 40px;
-}
-
-.glassmorphism {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-.glassmorphism2 {
-  background: rgba(18, 17, 17, 0.25);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-}
-
-/* ==== clerk class override ===== */
-
-.cl-userButtonPopoverActionButtonIcon {
-  color: white;
-}
-
-.cl-logoBox {
-  height: 40px;
-}
-.cl-dividerLine {
-  background: #252a41;
-  height: 2px;
-}
-
-.cl-socialButtonsIconButton {
-  border: 3px solid #565761;
-}
-
-.cl-internal-wkkub3 {
-  color: white;
-}
-.cl-userButtonPopoverActionButton {
-  color: white;
-}
-
-/* =============================== */
-
-@layer utilities {
-  .flex-center {
-    @apply flex justify-center items-center;
-  }
-
-  .flex-between {
-    @apply flex justify-between items-center;
-  }
-}
-
-/* animation */
-
-.show-block {
-  width: 100%;
-  max-width: 350px;
-  display: block;
-  animation: show 0.7s forwards linear;
-}
-
-@keyframes show {
-  0% {
-    animation-timing-function: ease-in;
-    width: 0%;
-  }
-
-  100% {
-    animation-timing-function: ease-in;
-    width: 100%;
-  }
-}
+### 1. Install Vercel CLI
+```bash
+npm install -g vercel
 ```
 
-</details>
-
-<details>
-<summary><code>tailwind.config.ts</code></summary>
-
-```typescript
-import type { Config } from 'tailwindcss';
-
-const config = {
-  darkMode: ['class'],
-  content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-  ],
-  prefix: '',
-  theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
-    extend: {
-      colors: {
-        dark: {
-          1: '#1C1F2E',
-          2: '#161925',
-          3: '#252A41',
-          4: '#1E2757',
-        },
-        blue: {
-          1: '#0E78F9',
-        },
-        sky: {
-          1: '#C9DDFF',
-          2: '#ECF0FF',
-          3: '#F5FCFF',
-        },
-        orange: {
-          1: '#FF742E',
-        },
-        purple: {
-          1: '#830EF9',
-        },
-        yellow: {
-          1: '#F9A90E',
-        },
-      },
-      keyframes: {
-        'accordion-down': {
-          from: { height: '0' },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: '0' },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
-      },
-      backgroundImage: {
-        hero: "url('/images/hero-background.png')",
-      },
-    },
-  },
-  plugins: [require('tailwindcss-animate')],
-} satisfies Config;
-
-export default config;
+### 2. Login & Deploy
+```bash
+vercel login
+vercel --prod
 ```
 
-</details>
-
-<details>
-<summary><code>components/MeetingCard.tsx</code></summary>
-
-```typescript
-"use client";
-
-import Image from "next/image";
-
-import { cn } from "@/lib/utils";
-import { Button } from "./ui/button";
-import { avatarImages } from "@/constants";
-import { useToast } from "./ui/use-toast";
-
-interface MeetingCardProps {
-  title: string;
-  date: string;
-  icon: string;
-  isPreviousMeeting?: boolean;
-  buttonIcon1?: string;
-  buttonText?: string;
-  handleClick: () => void;
-  link: string;
-}
-
-const MeetingCard = ({
-  icon,
-  title,
-  date,
-  isPreviousMeeting,
-  buttonIcon1,
-  handleClick,
-  link,
-  buttonText,
-}: MeetingCardProps) => {
-  const { toast } = useToast();
-
-  return (
-    <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
-      <article className="flex flex-col gap-5">
-        <Image src={icon} alt="upcoming" width={28} height={28} />
-        <div className="flex justify-between">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="text-base font-normal">{date}</p>
-          </div>
-        </div>
-      </article>
-      <article className={cn("flex justify-center relative", {})}>
-        <div className="relative flex w-full max-sm:hidden">
-          {avatarImages.map((img, index) => (
-            <Image
-              key={index}
-              src={img}
-              alt="attendees"
-              width={40}
-              height={40}
-              className={cn("rounded-full", { absolute: index > 0 })}
-              style={{ top: 0, left: index * 28 }}
-            />
-          ))}
-          <div className="flex-center absolute left-[136px] size-10 rounded-full border-[5px] border-dark-3 bg-dark-4">
-            +5
-          </div>
-        </div>
-        {!isPreviousMeeting && (
-          <div className="flex gap-2">
-            <Button onClick={handleClick} className="rounded bg-blue-1 px-6">
-              {buttonIcon1 && (
-                <Image src={buttonIcon1} alt="feature" width={20} height={20} />
-              )}
-              &nbsp; {buttonText}
-            </Button>
-            <Button
-              onClick={() => {
-                navigator.clipboard.writeText(link);
-                toast({
-                  title: "Link Copied",
-                });
-              }}
-              className="bg-dark-4 px-6"
-            >
-              <Image
-                src="/icons/copy.svg"
-                alt="feature"
-                width={20}
-                height={20}
-              />
-              &nbsp; Copy Link
-            </Button>
-          </div>
-        )}
-      </article>
-    </section>
-  );
-};
-
-export default MeetingCard;
+### 3. Set Environment Variables on Vercel
+```bash
+echo "your_value" | vercel env add VARIABLE_NAME production
 ```
 
-</details>
+Or via **Vercel Dashboard** → Project → Settings → Environment Variables.
 
-## <a name="links">🔗 Links</a>
+> 💡 **Important:** After deploying, update `NEXT_PUBLIC_BASE_URL` to your production URL (e.g., `https://cloudcall-main.vercel.app`).
 
-Public assets used in the project can be found [here](https://drive.google.com/file/d/1ofTpWii_sCIdJ14uQ431xWVXpYgjtQ8Q/view?usp=sharing)
+---
 
-## <a name="more">🚀 More</a>
+## 🔑 Service Setup
 
-**Advance your skills with Next.js Pro Course**
+### Clerk (Authentication)
+1. Create account at [clerk.com](https://clerk.com)
+2. Create a new application
+3. Go to **Developers → API Keys** and copy your keys
+4. In **Developers → Paths**, set:
+   - Sign-in URL: `/sign-in`
+   - Sign-up URL: `/sign-up`
 
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning experience. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
+### Stream.io (Video)
+1. Create account at [getstream.io](https://getstream.io)
+2. Create a new app
+3. Enable **Video & Audio** product
+4. Set app to **Production** mode for deployed environments
+5. Copy **API Key** and **Secret** from App Access Keys
 
-<a href="https://www.jsmastery.pro/ultimate-next-course" target="_blank">
-<img src="https://i.ibb.co/804sPK6/Image-720.png" alt="Project Banner">
-</a>
-#   m i n o r - p r o j e c t  
- 
+---
+
+## 🔄 Data Flow
+
+```
+User Opens App
+      │
+      ▼
+Clerk Middleware ──── Not Authenticated ──→ /sign-in
+      │
+      │ Authenticated
+      ▼
+StreamClientProvider
+      │
+      ├── fetch /api/get-stream-token
+      │         │
+      │         ├── auth() ← Clerk session
+      │         └── StreamClient.createToken(userId)
+      │
+      ▼
+StreamVideoClient initialized (WebSocket connected)
+      │
+      ▼
+User creates/joins meeting
+      │
+      ▼
+call.getOrCreate({ data: { starts_at, description } })
+      │
+      ▼
+Redirect to /meeting/[id]
+      │
+      ▼
+MeetingSetup → MeetingRoom (Live video call)
+```
+
+---
+
+## 📱 Pages & Routes
+
+| Route | Description | Auth Required |
+|---|---|---|
+| `/` | Home dashboard with meeting cards | ✅ Yes |
+| `/upcoming` | List of scheduled meetings | ✅ Yes |
+| `/previous` | Past meeting history | ✅ Yes |
+| `/recordings` | Recorded sessions | ✅ Yes |
+| `/personal-room` | Your permanent meeting room | ✅ Yes |
+| `/meeting/[id]` | Live video call room | ✅ Yes |
+| `/sign-in` | Login page | ❌ No |
+| `/sign-up` | Registration page | ❌ No |
+| `/api/get-stream-token` | Stream JWT token API | ✅ Yes |
+
+---
+
+## 🎨 UI Design System
+
+### Color Palette
+
+```
+Primary Blue     #0E78F9  ████  Main actions, active states
+Dark Background  #1C1F2E  ████  App background
+Surface          #252A41  ████  Cards, inputs, modals
+Sky Blue         #72A5DC  ████  Secondary text, accents
+Orange           #F9A90E  ████  Schedule meeting card
+Blue             #0E78F9  ████  Join meeting card
+Purple           #830EF9  ████  Upcoming meeting card
+Yellow           #F9E609  ████  Recordings card
+```
+
+### Typography
+- **Font**: Inter (Google Fonts)
+- **Weights**: 400 (Normal), 500 (Medium), 600 (Semibold), 700 (Bold)
+
+---
+
+## 🤖 AI Chatbot Capabilities
+
+The built-in AI assistant supports:
+
+| Category | Examples |
+|---|---|
+| 🔢 Math | `2 + 2`, `15 * 3`, `100 / 4` |
+| ⚡ Electronics | Ohm's Law, Voltage, Current, Resistance |
+| ⚙️ Physics | Kinetic Energy, Force, Newton's Laws |
+| 💻 CS Concepts | CPU, RAM, Stack, Queue, Big-O notation |
+| 📞 Call Help | Mic muted, camera off, bandwidth issues |
+| 😄 Fun | Tech jokes, motivational quotes |
+
+---
+
+## 🔒 Security
+
+- All routes protected by **Clerk middleware**
+- **JWT tokens** generated server-side for Stream.io
+- Environment variables never exposed to client (except `NEXT_PUBLIC_*`)
+- Stream token has **1-hour expiry** with issued-at validation
+- API route `/api/get-stream-token` returns 401 for unauthenticated requests
+
+---
+
+## 📦 Available Scripts
+
+```bash
+npm run dev       # Start development server
+npm run build     # Build for production
+npm run start     # Start production server
+npm run lint      # Run ESLint
+```
+
+---
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m "Add amazing feature"`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+<div align="center">
+
+## 👨‍💻 Built With ❤️ Using
+
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=next.js&logoColor=white)](https://nextjs.org)
+[![Stream](https://img.shields.io/badge/Stream-005FFF?style=flat-square&logo=stream&logoColor=white)](https://getstream.io)
+[![Clerk](https://img.shields.io/badge/Clerk-6C47FF?style=flat-square&logo=clerk&logoColor=white)](https://clerk.com)
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white)](https://vercel.com)
+[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
+
+<br/>
+
+**⭐ Star this repo if you found it helpful!**
+
+</div>
