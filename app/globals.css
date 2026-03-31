@@ -8,44 +8,141 @@
   box-sizing: border-box;
 }
 
-/* ======== stream css overrides ======== */
-.str-video__call-stats {
-  max-width: 500px;
+/* ── Design tokens ─────────────────────────────────────────── */
+:root {
+  --font-display: var(--font-syne), sans-serif;
+  --clr-blue: #0e78f9;
+  --clr-purple: #830ef9;
+  --clr-glow-blue: rgba(14, 120, 249, 0.35);
+  --clr-glow-purple: rgba(131, 14, 249, 0.25);
+}
+
+/* ── Custom scrollbar ──────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #161925;
+}
+::-webkit-scrollbar-thumb {
+  background: #252a41;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0e78f9;
+}
+
+/* ── Display font on headings ──────────────────────────────── */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+/* ── Keyframes ─────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes borderGlow {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.7;
+  }
+}
+
+/* ── Animation utility classes ─────────────────────────────── */
+.animate-fade-in-up {
+  animation: fadeInUp 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* staggered children */
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 70ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 140ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 210ms; }
+
+/* ── Card hover lift ───────────────────────────────────────── */
+.card-lift {
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-lift:hover {
+  transform: translateY(-5px);
+}
+.card-lift:active {
+  transform: scale(0.97);
+}
+
+/* ── Navbar glass ──────────────────────────────────────────── */
+.nav-glass {
+  background: rgba(28, 31, 46, 0.82);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(37, 42, 65, 0.7);
+}
+
+/* ── Footer top gradient border ────────────────────────────── */
+.footer-glow-border {
   position: relative;
 }
-
-.str-video__speaker-layout__wrapper {
-  max-height: 700px;
+.footer-glow-border::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    #0e78f9 25%,
+    #830ef9 75%,
+    transparent 100%
+  );
+  animation: borderGlow 3.5s ease-in-out infinite;
 }
 
-.str-video__participant-details {
-  color: white;
-}
-
-.str-video__menu-container {
-  color: white;
-}
-
-.str-video__notification {
-  color: white;
-}
-
-.str-video__participant-list {
-  background-color: #1c1f2e;
-  padding: 10px;
-  border-radius: 10px;
-  color: white;
-  height: 100%;
-}
-
-.str-video__call-controls__button {
-  height: 40px;
-}
-
+/* ── Glassmorphism ─────────────────────────────────────────── */
 .glassmorphism {
-  background: rgba(255, 255, 255, 0.25);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 .glassmorphism2 {
   background: rgba(18, 17, 17, 0.25);
@@ -53,12 +150,34 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
-/* ==== clerk class override ===== */
+/* ── Stream CSS overrides ──────────────────────────────────── */
+.str-video__call-stats {
+  max-width: 500px;
+  position: relative;
+}
+.str-video__speaker-layout__wrapper {
+  max-height: 700px;
+}
+.str-video__participant-details,
+.str-video__menu-container,
+.str-video__notification {
+  color: white;
+}
+.str-video__participant-list {
+  background-color: #1c1f2e;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  height: 100%;
+}
+.str-video__call-controls__button {
+  height: 40px;
+}
 
+/* ── Clerk class overrides ─────────────────────────────────── */
 .cl-userButtonPopoverActionButtonIcon {
   color: white;
 }
-
 .cl-logoBox {
   height: 40px;
 }
@@ -66,32 +185,25 @@
   background: #252a41;
   height: 2px;
 }
-
 .cl-socialButtonsIconButton {
   border: 3px solid #565761;
 }
-
-.cl-internal-wkkub3 {
-  color: white;
-}
+.cl-internal-wkkub3,
 .cl-userButtonPopoverActionButton {
   color: white;
 }
 
-/* =============================== */
-
+/* ── Utility layer ─────────────────────────────────────────── */
 @layer utilities {
   .flex-center {
     @apply flex justify-center items-center;
   }
-
   .flex-between {
     @apply flex justify-between items-center;
   }
 }
 
-/* animation */
-
+/* ── Show animation (existing) ─────────────────────────────── */
 .show-block {
   width: 100%;
   max-width: 350px;
@@ -104,7 +216,6 @@
     animation-timing-function: ease-in;
     width: 0%;
   }
-
   100% {
     animation-timing-function: ease-in;
     width: 100%;
